@@ -19,7 +19,8 @@ function intro_message() {
                                  __/ |
                                 |___/ 
              Let's get comfy. ☕️
-    EOF
+             -------------------
+EOF
 }
 
 function set_aliases() {
@@ -42,7 +43,7 @@ function set_aliases() {
         rm -f -- "$tmp"
     }
 
-    EOF
+EOF
 }
 
 function list_packages() {
@@ -161,7 +162,7 @@ function goodbye_message() {
       ~                               ~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    EOF
+EOF
 }
 
 function main() {
