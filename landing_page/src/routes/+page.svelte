@@ -87,12 +87,12 @@
         <div class="bg-stone-800/50 p-6 rounded-lg border border-stone-700/50 backdrop-blur-sm">
           <h2 class="text-2xl font-semibold mb-4 text-amber-500/90">Latest Release</h2>
           <div class="prose prose-invert max-w-none">
-            <h3 class="text-lg font-semibold">v1.1.0</h3>
+            <h3 class="text-lg font-semibold">v1.2.0</h3>
             <ul class="list-disc pl-5 text-stone-300">
-              <li>Updated Neovim to latest stable version (v0.10.2)</li>
-              <li>Streamlined btop installation</li>
-              <li>Optimized package selection</li>
-              <li>Enhanced reliability and performance</li>
+              <li>Added missing shell aliases and improved permission handling</li>
+              <li>Expanded package selection with tree-sitter support</li>
+              <li>Enhanced Neovim installation reliability</li>
+              <li>Fixed core functionality issues</li>
             </ul>
           </div>
         </div>
