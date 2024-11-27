@@ -5,8 +5,8 @@
 set -e
 
 packages=(git kitty ripgrep fzf xclip gcc make unzip yarn nodejs npm wget awk curl)
-nvim_appimage="https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage"
-nvim_sha256sum="0154937dff91d02db56576c1bdf6790dc1d6c3a4072594fb74930e97d11a84b4"
+nvim_appimage="https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage"
+nvim_sha256sum="970113b5279718126b82adddf3fbed1741db7afabf8a4134635a0d75c9f2c5d8"
 
 function intro_message() {
     cat << 'EOF'
