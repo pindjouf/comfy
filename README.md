@@ -1,4 +1,4 @@
-# Post-Install Server Setup Script
+# Comfy
 
 Making the command-line experience comfy, we stand on the shoulders of giants.
 
