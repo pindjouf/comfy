@@ -4,7 +4,7 @@
 
 set -e
 
-packages=(git kitty ripgrep fzf xclip gcc make unzip yarn nodejs npm wget awk curl)
+packages=(git kitty ripgrep fzf xclip gcc make unzip yarn nodejs npm wget tree-sitter-cli fuse curl)
 nvim_appimage="https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage"
 nvim_sha256sum="970113b5279718126b82adddf3fbed1741db7afabf8a4134635a0d75c9f2c5d8"
 
@@ -119,7 +119,8 @@ function install_additional_packages() {
         echo "Exiting the program!"
         exit 1
     fi
-    mv nvim.appimage /usr/bin/nvim
+    chmod u+x nvim.appimage
+    sudo mv nvim.appimage /usr/bin/nvim
     echo "Neovim installed successfully!"
     
     git clone https://github.com/pindjouf/dotfiles.git
@@ -138,7 +139,7 @@ function install_additional_packages() {
     rm -rf btop
     echo "btop installed and set up successfully!"
 
-    echo "Installing yazi & tree-sitter..."
+    echo "Installing yazi..."
     if ! command -v cargo &> /dev/null; then
         echo "Rust not found. Installing..."
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -146,8 +147,8 @@ function install_additional_packages() {
         echo "Rust installed successfully!"
     fi
 
-    cargo install --locked yazi-fm yazi-cli tree-sitter-cli
-    echo "Yazi & tree-sitter installed successfully!"
+    cargo install --locked yazi-fm yazi-cli
+    echo "Yazi installed successfully!"
 }
 
 function goodbye_message() {
@@ -171,6 +172,7 @@ function main() {
     select_packages
     install_packages
     install_additional_packages
+    set_aliases
     goodbye_message
 }
 
