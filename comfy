@@ -137,15 +137,15 @@ function install_additional_packages() {
     rm -rf btop
     echo "btop installed and set up successfully!"
 
-    echo "Installing yazi..."
+    echo "Installing yazi & tree-sitter..."
     if ! command -v cargo &> /dev/null; then
         echo "Rust not found. Installing..."
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
         source ~/.cargo/env
         echo "Rust installed successfully!"
     fi
-    
-    cargo install --locked yazi-fm yazi-cli
+
+    cargo install --locked yazi-fm yazi-cli tree-sitter-cli
     echo "Yazi installed successfully!"
 }
 
